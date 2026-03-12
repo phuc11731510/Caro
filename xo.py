@@ -24,8 +24,8 @@ class XO(Enum):
     """Trả về kí tự string đại diện cho một quân trên bàn cờ hoặc ô trống."""
     return REGISTRY[self]
   
-REGISTRY[XO.X]='X'
-REGISTRY[XO.O]='O'
+REGISTRY[XO.X] = 'X'
+REGISTRY[XO.O] = 'O'
 REGISTRY[XO.Blank]='•'
 
 REGISTRY_SWAP[XO.X]=XO.O
