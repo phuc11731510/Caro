@@ -6,8 +6,8 @@ from Caro.board import Board
 from Caro.xo import XO
 
 class WinNot_Turn(NamedTuple):
-  WinNot:bool
-  Turn:XO
+  WinNot: bool
+  Turn: XO
 
 class Game:
   """Quản lí trạng thái trò chơi (liên quan tới người chơi và thắng thua)"""

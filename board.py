@@ -6,21 +6,21 @@ from Caro.xo import XO
 class Board:
   """Quản lí bàn cờ caro."""
   
-  def __init__(self,size:int=20):
-    self.size=size
-    self.board=[[XO.Blank for _ in range(size)] for _ in range(size)]
+  def __init__(self, size: int = 20):
+    self.size = size
+    self.board = [[XO.Blank for _ in range(size)] for _ in range(size)]
     
-  def get_piece(self,x:int,y:int)->XO:
+  def get_piece(self, x: int, y: int)->XO:
     """Trả về quân cờ thực sự tại một toạ độ trên bàn cờ"""
     return self.board[x][y]
   
   def in_board(self,x:int,y:int)->bool:
     """Kiểm tra xem một toạ độ có nằm trong bàn cờ hay không?"""
-    return 0<=x<self.size and 0<=y<self.size
+    return 0 <= x < self.size and 0 <= y < self.size
     
   def set_xo(self,x:int,y:int,Piece:XO):
     """Đặt một quân cờ tại một vị trí cụ thể trên bàn cờ"""
-    self.board[x][y]=Piece
+    self.board[x][y] = Piece
     
   def end_game_checker_vector(self,x:int,y:int,vector:tuple[int,int])->bool:
     """Kiểm tra xem đã kết thúc ván đấu chưa
